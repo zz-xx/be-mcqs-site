@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>SPPU BE MCQs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="{{ url_for('index_page') }}">SPPU BE MCQs</a></h1>
+								
+							</div>
+
+						<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="{{ url_for('index_page') }}">Home</a></li>
+								<li class="current"><a href="{{ url_for('submit_page') }}">Submit</a></li>
+							</ul>
+						</nav>
+
+					</header>
+				</div>
+
+			
+				<div class="container1">  
+					<form id="contact" method="post" enctype="multipart/form-data">
+							<h3>Submit</h3>
+							<h4>Help everyone out by contributing some material.</h4>
+							
+							<fieldset>
+									<input name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+							</fieldset>
+							<fieldset>
+									<input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+							</fieldset>
+							<fieldset>
+								<input name="branch" placeholder="Which Branch" type="text" tabindex="3" required>
+						</fieldset>
+						<fieldset>
+							<input name="subject" placeholder="Which Subject" type="text" tabindex="4" required>
+						</fieldset>
+							<fieldset>
+									<textarea name="message" placeholder="Type your description here...." tabindex="5" required></textarea>
+							</fieldset>
+							<fieldset>
+							<input name="image-file" id="image-file" type="file">
+						</fieldset>
+							<fieldset>
+									<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+							</fieldset>
+					</form>
+				
+			</div>
+					
+
+    <!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>Site is not affiliated with Savitribai Phule Pune University (SPPU) in anyway.
+										Site owner does not claim copyright to any of the content.</li>
+									</ul>
+									Designed and created by <a href="http://github.com/zz-xx">zz-xx.</a><br />
+									Special thanks to <a href="http://github.com/indranil53">indranil53.</a>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.dropotron.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+			<script>
+				$('#image-file').on('change', function() {
+ 				var numb = $(this)[0].files[0].size/1024/1024;
+					numb = numb.toFixed(4);
+					if(numb > 25){
+						alert('File too big. Maximum size is 25MB. You file size is: ' + numb +' MB.');
+						} 
+     });
+
+			</script>
+
+	</body>
+</html>

@@ -1,0 +1,120 @@
+
+@app.route('/civil/cm')
+def civil_engineering_cm():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/civil/qsct')
+def civil_engineering_qsct():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/comp/cc')
+def comp_engineering_cc():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/comp/ertos')
+def comp_engineering_ertos():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/comp/hci')
+def comp_engineering_hci():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/comp/ics')
+def comp_engineering_ics():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/comp/scoa')
+def comp_engineering_scoa():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/electrical/ed')
+def electrical_engineering_ed():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/electrical/pecd')
+def electrical_engineering_pecd():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/electrical/sgp')
+def electrical_engineering_sgp():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/entc/AVE')
+def entc_engineering_AVE():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/entc/BCS')
+def entc_engineering_BCS():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/entc/MC')
+def entc_engineering_MC():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/entc/MCOM')
+def entc_engineering_MCOM():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/entc/WSN')
+def entc_engineering_WSN():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/it/DCS')
+def it_engineering_DCS():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/it/IOT')
+def it_engineering_IOT():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/it/SMA')
+def it_engineering_SMA():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/it/UC')
+def it_engineering_UC():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/mech/amp')
+def mech_engineering_amp():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/mech/ee')
+def mech_engineering_ee():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/mech/ie')
+def mech_engineering_ie():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/mech/msd')
+def mech_engineering_msd():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)
+
+@app.route('/mech/pdd')
+def mech_engineering_pdd():
+    subjects = "test"
+    return render_template("subject-template.html", subjects)

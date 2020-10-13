@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>SPPU BE MCQs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+        <style>
+
+.marquee {
+  height: 25px;
+  margin: 0 auto;
+  padding: 1.5em;
+  font-size: 16pt;
+  overflow: hidden;
+  position: relative;
+  max-width: 90%;
+		width: 1400px;
+		color: #fff;
+		font-weight: 400;
+		letter-spacing: 0.025em;
+}
+	@media screen and (max-width: 1680px) {
+
+			.marquee {
+				width: 1200px;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.marquee {
+				width: 960px;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.marquee {
+				width: 90%;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.marquee {
+				width: 100%;
+			}
+
+		}
+.marquee div {
+  display: block;
+  height: 40px;
+  
+  color: #fff;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 18s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  /*width: 50%;*/
+}
+
+@keyframes marquee {
+  0% { left: 50%; }
+  100% { left: -350%; }
+}
+</style>
+	<body class="is-preload homepage">
+
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="{{ url_for('index_page') }}">SPPU BE MCQs</a></h1>
+								
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="{{ url_for('index_page') }}">Home</a></li>
+									<li><a href="{{ url_for('submit_page') }}">Submit</a></li>
+								</ul>
+							</nav>
+
+							 
+
+					</header>
+				</div>
+
+			<!-- Banner -->
+				<div id="banner-wrapper">
+					<div id="banner" class="box container">
+						<div class="row">
+								<h2><span style="color:#fff">Free final year MCQs and more..</span></h2>
+								<p>All available material and MCQs are categorized according to engineering branches and their respective subjects.
+									You can also help out by submitting material <a href="{{ url_for('submit_page') }}"> here</a>.
+								</p>
+							
+							<!--
+							<div class="col-5 col-12-medium">
+								<ul>
+									<li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>
+								</ul>
+							</div>
+							-->
+
+						</div>
+					</div>
+				</div>
+
+				<div class="marquee">
+					<div>
+					<span style="background-color: #63cdff;">NEW UPDATES: Added Compiler in Computer Engineering, VLSI in Electronics & Telecommunication, Tribology in Mechanical Engineering and textbooks for Computer Engineering.</span>
+					</div>
+				</div>
+				
+			<!-- Features -->
+
+				<div id="features-wrapper">
+					<div class="container">
+
+						
+
+						<div class="row">
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										
+										<div class="inner">
+											<header>
+												<h2>Computer Engineering</h2>
+												<p>Comp</p>
+											</header>
+											<p><a href="{{ url_for('computer_engineering_page') }}" class="button small icon solid fa-arrow-circle-right">View</a></p>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										
+										<div class="inner">
+											<header>
+												<h2>Information Technology</h2>
+												<p>IT</p>
+											</header>
+											<p><a href="{{ url_for('it_engineering_page') }}" class="button small icon solid fa-arrow-circle-right">View</a></p></div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										
+										<div class="inner">
+											<header>
+												<h2>Electronics & Telecommunication</h2>
+												<p>E&TC</p>
+											</header>
+											<p><a href="{{ url_for('entc_engineering_page') }}" class="button small icon solid fa-arrow-circle-right">View</a></p></div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										
+										<div class="inner">
+											<header>
+												<h2>Electrical Engineering</h2>
+												<p>Electrical</p>
+											</header>
+											<p><a href="{{ url_for('electrical_engineering_page') }}" class="button small icon solid fa-arrow-circle-right">View</a></p></div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										
+										<div class="inner">
+											<header>
+												<h2>Civil Engineering</h2>
+												<p>Civil</p>
+											</header>
+											<p><a href="{{ url_for('civil_engineering_page') }}" class="button small icon solid fa-arrow-circle-right">View</a></p></div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										
+										<div class="inner">
+											<header>
+												<h2>Mechanical Engineering</h2>
+												<p>Mechanical</p>
+											</header>
+											<p><a href="{{ url_for('mechanical_engineering_page') }}" class="button small icon solid fa-arrow-circle-right">View</a></p></div>
+									</section>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>Site is not affiliated with Savitribai Phule Pune University (SPPU) in anyway.
+										Site owner does not claim copyright to any of the content.</li>
+									</ul>
+									Designed and created by <a href="http://github.com/zz-xx">zz-xx.</a> <br />
+									Special thanks to <a href="http://github.com/indranil53">indranil53.</a>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.dropotron.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>
