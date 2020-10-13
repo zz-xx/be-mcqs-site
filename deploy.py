@@ -96,8 +96,6 @@ def mechanical_engineering_page():
         return render_template('mechanical-engineering.html')
 
 
-
-
 #---comp routes---#
 
 @app.route('/comp/ml')
