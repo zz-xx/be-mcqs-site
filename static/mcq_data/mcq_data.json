@@ -1,0 +1,150 @@
+{
+  "civil": {
+    "full_name": "Civil Engineering",
+    "short_name": "Civil",
+    "subjects": {
+      "cm": {
+        "full_name": "Construction Management",
+        "short_name": "CM"
+      },
+      "qsct": {
+        "full_name": "Quantity Surveying,Contracts and Tenders",
+        "short_name": "QSCT"
+      }
+    }
+  },
+  "comp": {
+    "full_name": "Computer Engineering",
+    "short_name": "Comp",
+    "subjects": {
+      "cc": {
+        "full_name": "Cloud Computing",
+        "short_name": "Cloud"
+      },
+      "compiler": {
+        "full_name": "Compilers",
+        "short_name": "Compilers"
+      },
+      "ertos": {
+        "full_name": "Embedded and Real Time Operating System",
+        "short_name": "ERTOS"
+      },
+      "hci": {
+        "full_name": "Human Computer Interface",
+        "short_name": "HCI"
+      },
+      "ics": {
+        "full_name": "Information and Cyber Security",
+        "short_name": "ICS"
+      },
+      "ml": {
+        "full_name": "Machine Learning",
+        "short_name": "ML"
+      },
+      "scoa": {
+        "full_name": "Soft Computing and Optimization Algorithm",
+        "short_name": "SCOA"
+      },
+      "textbooks": {
+        "full_name": "Textbooks",
+        "short_name": "Textbooks"
+      }
+    }
+  },
+  "electrical": {
+    "full_name": "Electrical Engineering",
+    "short_name": "Electrical",
+    "subjects": {
+      "ed": {
+        "full_name": "Electronic Drives",
+        "short_name": "ED"
+      },
+      "pecd": {
+        "full_name": "Power Electronic Controlled Drives",
+        "short_name": "PECD"
+      },
+      "sgp": {
+        "full_name": "Switchgear and Protection",
+        "short_name": "SGP"
+      }
+    }
+  },
+  "entc": {
+    "full_name": "Electronics & Telecommunication",
+    "short_name": "E&TC",
+    "subjects": {
+      "AVE": {
+        "full_name": "Audio Video Engineering",
+        "short_name": "AVE"
+      },
+      "BCS": {
+        "full_name": "Broadband Communication Systems",
+        "short_name": "BCS"
+      },
+      "MCOM": {
+        "full_name": "Mobile Communication",
+        "short_name": "MCOM"
+      },
+      "VLSI": {
+        "full_name": "Very-Large-Scale-Integrations",
+        "short_name": "VLSI"
+      },
+      "WSN": {
+        "full_name": "Wireless Networks",
+        "short_name": "WSN"
+      }
+    }
+  },
+  "it": {
+    "full_name": "Information Technology",
+    "short_name": "IT",
+    "subjects": {
+      "DCS": {
+        "full_name": "Distributed System",
+        "short_name": "DCS"
+      },
+      "IOT": {
+        "full_name": "Internet of Things",
+        "short_name": "IOT"
+      },
+      "SMA": {
+        "full_name": "Social Media Analytics",
+        "short_name": "SMA"
+      },
+      "UC": {
+        "full_name": "Ubiquitous Computing",
+        "short_name": "UC"
+      }
+    }
+  },
+  "mech": {
+    "full_name": "Mechanical Engineering",
+    "short_name": "Mechanical",
+    "subjects": {
+      "amp": {
+        "full_name": "Advanced Manufacturing Processes",
+        "short_name": "AMP"
+      },
+      "ee": {
+        "full_name": "Energy Engineering",
+        "short_name": "EE"
+      },
+      "ie": {
+        "full_name": "Industrial Engineering",
+        "short_name": "IE"
+      },
+      "msd": {
+        "full_name": "Mechanical System Design",
+        "short_name": "MSD"
+      },
+      "pdd": {
+        "full_name": "Product Design and Development",
+        "short_name": "PDD"
+      },
+      "tribology": {
+        "full_name": "Tribology",
+        "short_name": "Tribology"
+      }
+    }
+  }
+}
