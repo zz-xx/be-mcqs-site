@@ -2707,7 +2707,8 @@ input, select, textarea {
 
 .download_button .filename {
   font-size: 17px;
-  margin: 10px 20px 0;
+		margin: 10px 20px 0;
+		word-wrap: break-word;
 }
 .download_button .filesize {
   margin: 10px 20px 0;  
