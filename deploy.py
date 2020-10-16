@@ -9,6 +9,10 @@ from flask import Flask, request, render_template, send_from_directory, make_res
 mcq_data_dict = None
 app = Flask(__name__)
 
+#load mcq_data json
+@app.before_first_request
+def activate_job():
+	read_mcq_data()
 
 # favicon
 @app.route('/favicon.ico')
@@ -106,5 +110,4 @@ def read_mcq_data():
 
 
 if __name__ == '__main__':
-    read_mcq_data()
     app.run()
