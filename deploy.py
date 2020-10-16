@@ -3,7 +3,7 @@ import json
 import os
 from werkzeug.utils import secure_filename
 
-from flask import Flask, request, render_template, send_from_directory
+from flask import Flask, request, render_template, send_from_directory, make_response
 
 
 mcq_data_dict = None
@@ -69,32 +69,34 @@ def page_not_found(e):
 @app.route('/<branch>/<subject>')
 @app.route('/<branch>/', defaults={'subject': None})
 def main_route(branch, subject):
+	try:
+		if subject is None:
+			branch_folder_path = f"./static/mcq_data/{branch}"
+			branch_subjects_folders_list = [
+				x for x in next(os.walk(branch_folder_path))[1]]
+			subject_long_names = [mcq_data_dict[branch]["subjects"][subject_folder]["full_name"] if subject_folder in mcq_data_dict[branch]
+								  ["subjects"] else subject_folder for subject_folder in branch_subjects_folders_list]
+			subject_short_names = [mcq_data_dict[branch]["subjects"][subject_folder]["short_name"]
+								   if subject_folder in mcq_data_dict[branch]["subjects"] else subject_folder for subject_folder in branch_subjects_folders_list]
+			return render_template("engineering-branch.html", branch=branch, subjects_list=branch_subjects_folders_list,
+								   subject_long_names_list=subject_long_names, subject_short_names_list=subject_short_names)
 
-    if subject is None:
-        branch_folder_path = f"./static/mcq_data/{branch}"
-        branch_subjects_folders_list = [
-            x for x in next(os.walk(branch_folder_path))[1]]
-        subject_long_names = [mcq_data_dict[branch]["subjects"][subject_folder]["full_name"] if subject_folder in mcq_data_dict[branch]
-                              ["subjects"] else subject_folder for subject_folder in branch_subjects_folders_list]
-        subject_short_names = [mcq_data_dict[branch]["subjects"][subject_folder]["short_name"]
-                               if subject_folder in mcq_data_dict[branch]["subjects"] else subject_folder for subject_folder in branch_subjects_folders_list]
-        return render_template("engineering-branch.html", branch=branch, subjects_list=branch_subjects_folders_list,
-                               subject_long_names_list=subject_long_names, subject_short_names_list=subject_short_names)
-
-    else:
-        subject_folder_path = f"./static/mcq_data/{branch}/{subject}"
-        subject_files_list = os.listdir(subject_folder_path)
-        subject_files_size = [round((os.stat(
-            f"{subject_folder_path}/{file_name}").st_size)/1048576, 2) for file_name in subject_files_list]
-        subject_dict = {
-            "files_list": subject_files_list,
-            "files_size": subject_files_size
-        }
-        subject_full_name = mcq_data_dict[branch]["subjects"][subject][
-            "full_name"] if subject in mcq_data_dict[branch]["subjects"] else subject
-        output_from_parsed_template = render_template(
-            'engineering-subject.html', subject_dict=subject_dict, branch=branch, subject_folder=subject, subject_full_name=subject_full_name)
-        return output_from_parsed_template
+		else:
+			subject_folder_path = f"./static/mcq_data/{branch}/{subject}"
+			subject_files_list = os.listdir(subject_folder_path)
+			subject_files_size = [round((os.stat(
+				f"{subject_folder_path}/{file_name}").st_size)/1048576, 2) for file_name in subject_files_list]
+			subject_dict = {
+				"files_list": subject_files_list,
+				"files_size": subject_files_size
+			}
+			subject_full_name = mcq_data_dict[branch]["subjects"][subject][
+				"full_name"] if subject in mcq_data_dict[branch]["subjects"] else subject
+			output_from_parsed_template = render_template(
+				'engineering-subject.html', subject_dict=subject_dict, branch=branch, subject_folder=subject, subject_full_name=subject_full_name)
+			return output_from_parsed_template
+	except:
+		return make_response(page_not_found(404))
 
 
 def read_mcq_data():
