@@ -92,6 +92,10 @@
       "WSN": {
         "full_name": "Wireless Networks",
         "short_name": "WSN"
+      },
+	  "EMT": {
+        "full_name": "ElectroMagnetic Theory",
+        "short_name": "EMT"
       }
     }
   },
